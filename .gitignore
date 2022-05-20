@@ -1,0 +1,10 @@
+*.pyc
+__pycache__
+pkgs/
+config/
+data/
+.idea
+*.egg-info/
+.ipynb_checkpoints
+.history
+.vscode
