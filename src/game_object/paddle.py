@@ -9,14 +9,12 @@ class Paddle(GameObject):
         self.width = 80
         self.height = 10
         self.ball = None
-        self.direction = [1, -1]
-        self.speed = 10
         item = canvas.create_rectangle(
             x - self.width / 2,
             y - self.height / 2,
             x + self.width / 2,
             y + self.height / 2,
-            fill="blue"
+            fill="#146EB4"
         )
 
         super().__init__(canvas, item)
@@ -35,5 +33,4 @@ class Paddle(GameObject):
         if coords[0] + offset >= 0 and coords[2] + offset <= width:
             super(Paddle, self).move(offset, 0)
             if self.ball is not None:
-                self.ball.move(offset, 0)
                 self.ball.move(offset, 0)
