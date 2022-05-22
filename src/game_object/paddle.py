@@ -1,6 +1,7 @@
 import tkinter as tk
-from .game_object import GameObject
+
 from .ball import Ball
+from .game_object import GameObject
 
 
 class Paddle(GameObject):
@@ -21,17 +22,18 @@ class Paddle(GameObject):
         super().__init__(canvas, item)
 
     @property
-    def ball(self):
+    def ball(self) -> None:
         return self._ball
 
     @property.setter
     def ball(self, ball: Ball) -> None:
         self._ball = ball
 
-    def move(self, offset):
+    def move(self, offset: int) -> None:
         coords = self.get_position()
         width = self.canvas.winfo_width()
         if coords[0] + offset >= 0 and coords[2] + offset <= width:
             super(Paddle, self).move(offset, 0)
             if self.ball is not None:
+                self.ball.move(offset, 0)
                 self.ball.move(offset, 0)

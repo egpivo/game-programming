@@ -1,4 +1,5 @@
 import tkinter as tk
+
 from .game_object import GameObject
 
 COLORS = {1: "#999999", 2: "#555555", 3: "#222222"}

@@ -16,10 +16,10 @@ class GameObject:
     [10.0, 10.0, 10.0, 10.0]
     >>> game_object.move(20, -10)
     >>> print(game_object.get_position())
-    [30.0, 0.0, 30.0, 0.0]    
+    [30.0, 0.0, 30.0, 0.0]
     >>> game_object.delete()
     >>> print(game_object.get_position())
-    []    
+    []
     """
 
     def __init__(self, canvas: tk.Canvas, item: int) -> None:
