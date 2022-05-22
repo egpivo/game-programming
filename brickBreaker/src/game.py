@@ -32,9 +32,10 @@ class Game(tk.Frame):
         self.items[self.paddle.item] = self.paddle
 
         for x in range(5, self.width - 5, BRICK_WIDTH):
-            self.add_brick(x + BRICK_WIDTH / 2, 50, 2)
-            self.add_brick(x + BRICK_WIDTH / 2, 70, 1)
+            self.add_brick(x + BRICK_WIDTH / 2, 50, 3)
+            self.add_brick(x + BRICK_WIDTH / 2, 70, 2)
             self.add_brick(x + BRICK_WIDTH / 2, 90, 1)
+            self.add_brick(x + BRICK_WIDTH / 2, 110, 1)
 
         self.hud = None
         self.setup_game()
@@ -45,7 +46,7 @@ class Game(tk.Frame):
     def setup_game(self) -> None:
         self.add_ball()
         self.update_lives_text()
-        self.text = self.draw_text(300, 200, "Press Space to start", 30)
+        self.text = self.draw_text(300, 200, "Press Space to Start", 30)
         self.canvas.bind("<space>", lambda _: self.start_game())
 
     def add_ball(self):
@@ -83,7 +84,7 @@ class Game(tk.Frame):
         num_bricks = len(self.canvas.find_withtag("brick"))
         if num_bricks == 0:
             self.ball.speed = None
-            self.draw_text(300, 200, "You win!")
+            self.draw_text(300, 200, "You Win!")
         elif self.ball.get_position()[3] >= self.height:
             self.ball.speed = None
             self.lives -= 1

@@ -10,13 +10,15 @@ DIRECTIONS = {
     "top_right": [1, -1],
     "bottom_left": [-1, 1],
 }
+BALL_RADIUS = 10
+BALL_SPEED = 5
 
 
 class Ball(GameObject):
     def __init__(self, canvas: tk.Canvas, x: int, y: int) -> None:
-        self.radius = 10
+        self.radius = BALL_RADIUS
         self.direction = DIRECTIONS["top_right"]
-        self.speed = 5
+        self.speed = BALL_SPEED
         item = canvas.create_oval(
             x - self.radius,
             y - self.radius,
