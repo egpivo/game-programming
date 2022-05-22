@@ -1,7 +1,7 @@
 from setuptools import find_namespace_packages, setup
 
 setup(
-    name="hello-pong",
+    name="brick-breaker",
     version="0.0.0",
     install_requires=[
         "tkinter",
