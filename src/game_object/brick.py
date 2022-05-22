@@ -10,7 +10,7 @@ class Brick(GameObject):
         self.width = 75
         self.height = 20
         self.hits = hits
-        item = canvas.create_oval(
+        item = canvas.create_rectangle(
             x - self.width / 2,
             y - self.height / 2,
             x + self.width / 2,

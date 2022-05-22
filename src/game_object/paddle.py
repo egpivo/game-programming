@@ -25,7 +25,7 @@ class Paddle(GameObject):
     def ball(self) -> None:
         return self._ball
 
-    @property.setter
+    @ball.setter
     def ball(self, ball: Ball) -> None:
         self._ball = ball
 
