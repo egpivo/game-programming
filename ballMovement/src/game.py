@@ -10,7 +10,7 @@ BALL_POSITIONS = [
 ]
 
 
-class MainLayer(cocos.layer.Layer):
+class GameLayer(cocos.layer.Layer):
     is_event_handler = True
 
     def __init__(self) -> None:
@@ -55,6 +55,6 @@ class MainLayer(cocos.layer.Layer):
 
 if __name__ == '__main__':
     cocos.director.director.init(caption="Ball Movement")
-    layer = MainLayer()
+    layer = GameLayer()
     scene = cocos.scene.Scene(layer)
     cocos.director.director.run(scene)
